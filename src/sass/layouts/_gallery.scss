@@ -11,3 +11,19 @@
     margin: -4px;
   }
 }
+
+.picture__wrapper {
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .picture__wrapper {
+    transform: scale(100%);
+    transition: transform $duration $function;
+    z-index: 0;
+  }
+  
+  .picture__wrapper:hover {
+    transform: scale(120%);
+    z-index: 1;
+  }
