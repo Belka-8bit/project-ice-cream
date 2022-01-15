@@ -14,6 +14,15 @@
 }
 
 // Hero / Header btn
+.menu-btn {
+  margin: 0;
+  width: 160px;
+
+  @media screen and(max-width:767px) {
+    display: none;
+  }
+}
+
 .burger-btn {
   background-color: transparent;
   cursor: pointer;
@@ -43,6 +52,12 @@
   width: 209px;
   height: 44px;
   margin-bottom: 19px;
+  color: $main-accent-color;
+
+  &:hover,
+  &:focus {
+    background-color: $button-hover-color;
+  }
 }
 
 .btn-icon {
