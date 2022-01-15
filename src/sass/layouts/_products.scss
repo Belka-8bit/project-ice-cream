@@ -3,10 +3,6 @@
 
     padding-right: 20px;
     padding-left: 20px;
-
-    @media screen and (min-width: 768px) {
-        @include sectionMixin(122px, 112px);
-    }
 }
 
 .products__pre-title {
@@ -62,37 +58,12 @@
 }
 
 .products__list {
-    @media screen and (max-width: 767px) {
-        margin-bottom: -130px;
-    }
-
-    @media screen and (min-width: 768px) {
-        display: flex;
-        margin-right: -30px;
-    }
-
-    @media screen and (min-width: 1200px) {
-        margin-right: -24px;
-    }
+    margin-bottom: -130px;
 }
 
 .products__item {
     position: relative;
-
-    @media screen and (max-width: 767px) {
-        margin-bottom: 130px;    
-    }
-
-    @media screen and (min-width: 768px) {
-        display: flex;
-        width: calc((100% - 90px) / 3);
-        margin-right: 30px;
-    }
-
-    @media screen and (min-width: 1280px) {
-        width: calc((100% - 72px) / 3);
-        margin-right: 24px;
-    }
+    margin-bottom: 130px;
 
     &.ice-cream::before {
     content: "";
