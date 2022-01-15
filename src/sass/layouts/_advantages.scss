@@ -3,7 +3,8 @@
   background-color: $about-background-color;
 
   &__item {
-    width: 230px;
+    margin-right: 50px;
+    min-width: 230px;
 
     @each $number in 1, 2, 3 {
       &:nth-child(#{$number})::before {
