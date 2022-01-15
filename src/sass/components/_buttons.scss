@@ -1,5 +1,4 @@
 %button {
-  display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
@@ -13,3 +12,115 @@
   border: none;
   border-radius: 22px;
 }
+
+// Hero / Header btn
+.menu-btn {
+  margin: 0;
+  width: 160px;
+
+  @media screen and(max-width:767px) {
+    display: none;
+  }
+}
+
+.burger-btn {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  line-height: 0;
+}
+
+.close-btn {
+  position: absolute;
+  top: 23px;
+  right: 28px;
+
+  width: 20px;
+  height: 12px;
+
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  line-height: 0;
+}
+
+.header-btn {
+  @extend %button;
+
+  width: 209px;
+  height: 44px;
+  margin-bottom: 19px;
+  color: $main-accent-color;
+
+  &:hover,
+  &:focus {
+    background-color: $button-hover-color;
+  }
+}
+
+.btn-icon {
+  margin-left: 12px;
+}
+
+.menu-btn {
+  margin: 0;
+  width: 160px;
+  @media screen and(max-width:767px) {
+    display: none;
+  }
+}
+
+.hero-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  justify-items: center;
+  cursor: pointer;
+  border-radius: 22px;
+  border: none;
+  color: $main-accent-color;
+}
+
+.hero-button__primary {
+  margin-right: 15px;
+  width: 104px;
+  height: 40px;
+  font-size: 14px;
+  line-height: 1.28;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: $main-light-color;
+  background-color: $main-accent-color;
+
+  &:hover,
+  &:focus {
+    background-color: $button-accent-hover-color;
+  }
+}
+
+.hero-button__secondary {
+  width: 138px;
+  height: 40px;
+  font-size: 14px;
+  line-height: 1.28;
+  align-items: center;
+  text-align: center;
+  color: $main-accent-color;
+  background-color: $main-light-color;
+
+  &:hover,
+  &:focus {
+    background-color: $button-hover-color;
+  }
+}
+
+.hero-tittle__btn {
+  display: flex;
+  margin-top: 19px;
+  margin-bottom: 19px;
+}
+// /Hero / Header btn
