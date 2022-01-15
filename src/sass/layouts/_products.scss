@@ -1,8 +1,5 @@
 .products__section {
-    @include sectionMixin(121px, 98px);
-
-    padding-right: 20px;
-    padding-left: 20px;
+    padding: 121px 0 98px;
 }
 
 .products__pre-title {
@@ -23,9 +20,10 @@
 
 .products__card {
     width: 100%;
+    max-width: 280px;
     background-color: $cream-card-background-color;
     border-radius: 24px;
-
+    margin: 0 auto;
     padding-left: 41px;
     padding-right: 39px;
     padding-top: 161px;
@@ -67,7 +65,6 @@
     margin: 0 auto;
     margin-bottom: 130px;
     
-    max-width: 280px;
 
     &.ice-cream::before {
     content: "";
