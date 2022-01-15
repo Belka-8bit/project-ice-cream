@@ -1,5 +1,5 @@
 .products__section {
-    @include sectionMixin(121px, 98px);
+    padding: 121px 0 98px;
 }
 
 .products__pre-title {
