@@ -44,7 +44,7 @@
 
 
     &::after {
-        content: url(../images/mobile/products/symbol-defs.svg#icon-dot);
+        content: url"(../../images/mobile/products/icons.svg#icon-dot)";
         width: 26px;
         height: 6px;
         
@@ -58,7 +58,7 @@
 }
 
 .products__btn {
-    @extend %button; 
+
     display: block;
     min-width: 40px;
     min-height: 40px;
@@ -68,7 +68,4 @@
 
 .products__btn-icon {
     fill: $main-accent-color;
-    width: 9px;
-    height: 9px;
-    margin: 15px;
 }
