@@ -1,6 +1,6 @@
 .gallery {
-    // padding-top: 49px;
-    // padding-bottom: 40px;
+    padding-top: 49px;
+    padding-bottom: 40px;
     background-image: linear-gradient($gallery-background-color 45%, $main-background-color 45%);
     
   }
@@ -31,12 +31,18 @@
   }
   
   .picture__wrapper:hover {
-    transform: scale(120%);
+    transform: scale(125%);
     z-index: 1;
   }
 
-//   .container {
-//     display: grid;
-//     grid-template-columns: repeat(2, 1fr);
-//     grid-template-rows: masonry;
-//   }
+  .gallery__column {
+    flex-basis: calc((100% - 7 * 2px) / 7);
+    margin-left: 1px;
+    margin-right: 1px;
+  }
+  
+
+  .gallery__row {
+    display: flex;
+    align-items: flex-start;
+  }
