@@ -1,10 +1,8 @@
 .gallery {
-    padding-top: 49px;
-    padding-bottom: 40px;
-    background-image: linear-gradient($gallery-background-color 45%, $main-background-color 45%);
-    
-    
-  }
+  padding-top: 49px;
+  padding-bottom: 40px;
+  background-image: linear-gradient($gallery-background-color 45%, $main-background-color 45%);
+}
 
 .gallery__thumb {
   display: flex;
@@ -13,57 +11,54 @@
   flex-wrap: wrap;
   margin: -1px;
 
-//   @media screen and(min-width:768px) {
-//     margin-right: auto;
-//     margin-left: auto;
-//     margin: -4px;
-//   }
+  //   @media screen and(min-width:768px) {
+  //     margin-right: auto;
+  //     margin-left: auto;
+  //     margin: -4px;
+  //   }
 }
 
 .picture__wrapper {
-    border-radius: 10px;
-    overflow: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.picture__wrapper {
+  transform: scale(100%);
+  transition: transform $duration $function;
+  z-index: 0;
+}
+
+.picture__wrapper:hover {
+  transform: scale(125%);
+  z-index: 1;
+}
+
+.gallery__column {
+  flex-basis: calc((100% - 7 * 2px) / 7);
+  margin-left: 1px;
+  margin-right: 1px;
+
+  &.big-pic {
+    flex-basis: calc((100% - 7 * 2px) / 7 * 2);
   }
-  
-  .picture__wrapper {
-    transform: scale(100%);
-    transition: transform $duration $function;
-    z-index: 0;
-  }
-  
-  .picture__wrapper:hover {
-    transform: scale(125%);
-    z-index: 1;
+
+  &.down-pic {
+    position: relative;
+    top: 3px;
   }
 
-  .gallery__column {
-    flex-basis: calc((100% - 7 * 2px) / 7);
-    margin-left: 1px;
-    margin-right: 1px;
-
-    &.big-pic {
-      flex-basis: calc((100% - 7 * 2px) / 7 * 2);
-    }
-
-    &.down-pic {
-      position: relative;
-      top: 3px;
-    }
-
-    &.up-pic {
-      position: relative;
-      bottom: 10px;
-    }
-
-
+  &.up-pic {
+    position: relative;
+    bottom: 10px;
   }
-  
+}
 
-  .gallery__row {
-    display: flex;
-    align-items: flex-start;
+.gallery__row {
+  display: flex;
+  align-items: flex-start;
 
-    &.small-pic {
-      width: 50%;
-    }
+  &.small-pic {
+    width: 50%;
   }
+}
