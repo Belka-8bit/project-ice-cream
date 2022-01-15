@@ -23,7 +23,7 @@
 
 .products__card {
     width: 100%;
-    background-color: $secondary-accent-color;
+    background-color: $cream-card-background-color;
     border-radius: 24px;
 
     padding-left: 41px;
@@ -52,8 +52,9 @@
         content: "...";
         display: block;
         margin: 0 auto;
-        width: 26px;
-        height: 6px;
+        letter-spacing: 4px;
+        font-weight: bold;
+        margin-top: 15px;
     }
 }
 
@@ -63,7 +64,10 @@
 
 .products__item {
     position: relative;
+    margin: 0 auto;
     margin-bottom: 130px;
+    
+    max-width: 280px;
 
     &.ice-cream::before {
     content: "";
@@ -149,6 +153,8 @@
     border-radius: 50%;
     border: none;
     cursor: pointer;
+
+    background-color: $main-light-color;
 }
 
 .products__btn-icon {
