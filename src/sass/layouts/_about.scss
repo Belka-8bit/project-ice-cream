@@ -1,5 +1,5 @@
 .about {
-  text-align: center;
+  text-align: start;
   padding-top: 125px;
   padding-bottom: 39px;
   background: #fff5f6;
@@ -29,6 +29,11 @@
   min-width: 280px;
 }
 
+.about__text {
+  padding: 0 30px;
+  margin-bottom: 20px;
+}
+
 .about__text--top {
   @include font('DM Sans', 12px, 500, 1.62, 0.04em, $main-dark-color);
 
@@ -37,7 +42,6 @@
 
 .abour__text--bottom {
   @include font('DM Sans', 12px, 500, 1.62, 0.04em, $secondary-dark-color);
-  margin-bottom: 20px;
 }
 
 .about__btn {
