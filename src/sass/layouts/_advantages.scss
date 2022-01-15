@@ -3,6 +3,8 @@
   background-color: $about-background-color;
 
   &__item {
+    width: 230px;
+
     @each $number in 1, 2, 3 {
       &:nth-child(#{$number})::before {
         display: block;
@@ -14,7 +16,6 @@
 
   &__item:not(:last-child) {
     margin-bottom: 38px;
-    width: 230px;
   }
 
   &__property {
