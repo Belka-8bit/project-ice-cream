@@ -7,3 +7,119 @@
 .hero .container {
   position: relative;
 }
+
+.hero-heading {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-title {
+  font-family: $secondary-font;
+
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: $main-light-color;
+
+  width: 218px;
+}
+
+.hero-accent {
+  font-family: $secondary-font;
+
+  font-size: 48px;
+  line-height: 0.96;
+
+  color: $main-accent-color;
+}
+
+.hero-image__thumb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-35%, -23%);
+  width: 346px;
+  height: 420px;
+}
+
+.hero-circle {
+  background: $hero-secondary-background-color;
+  border-radius: 50%;
+  width: 346px;
+  height: 346px;
+}
+
+.hero-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -49%);
+  animation: hero-image 750ms linear;
+}
+
+@keyframes hero-image {
+  0% {
+    transform: translateX(-46%);
+  }
+}
+
+.girl-ice-image {
+  animation: girl-ice-image 750ms linear;
+}
+
+@keyframes girl-ice-image {
+  0% {
+    transform: translateX(200%);
+  }
+}
+
+.milk-thumb {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  display: flex;
+}
+
+.milk-text__thumb {
+  width: 114px;
+  height: 75px;
+  padding-top: 20px;
+}
+
+.milk-text {
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 1.5;
+  color: $main-light-color;
+  margin-bottom: 20px;
+}
+
+.girl-thumb {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translate(0%, 21%);
+}
+
+.hero-label {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  font-family: $secondary-font;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(-34px, -80%);
+}
