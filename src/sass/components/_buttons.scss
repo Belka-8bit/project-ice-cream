@@ -13,3 +13,32 @@
   border: none;
   border-radius: 22px;
 }
+
+.contacts__button {
+    @extend %button;
+    width: 161px;
+    height: 44px;
+    background-color: $main-accent-color;
+    color: $main-light-color;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: background-color $duration $function;
+    &:hover,
+    &:focus {
+        background-color: #D41342;
+    }
+    &--light {
+        background-color: $main-background-color;
+        color: $main-accent-color;
+        margin-top: 10px;
+        transition: background-color $duration $function;
+    &:hover,
+    &:focus {
+        background-color: $button-hover-color;
+    }
+    }
+}
