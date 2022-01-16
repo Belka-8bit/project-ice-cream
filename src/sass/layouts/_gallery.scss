@@ -4,6 +4,12 @@
   background-image: linear-gradient($gallery-background-color 45%, $main-background-color 45%);
 }
 
+.container {
+  min-width: 320px;}
+
+  .container.responsive {
+    max-width: 1140px;}
+
 .gallery__thumb {
   display: flex;
   justify-content: center;
