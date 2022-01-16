@@ -70,6 +70,8 @@
     width: 330px;
     height: 105px;
   }
+  // @media {
+  // }
 }
 // .reviews-block__text:before {
 //   content: '';
@@ -99,6 +101,11 @@
   z-index: 1;
   @media (min-width: 480px) {
     width: 370px;
+    left: -10px;
+    bottom: 10px;
+    font-size: 14px;
+    line-height: 2.16;
+    letter-spacing: 0.04em;
   }
 }
 .block__text::before {
