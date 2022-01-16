@@ -1,0 +1,43 @@
+.advantages {
+  padding: 20px 0 48px;
+  background-color: $about-background-color;
+
+  &__item {
+    margin-right: 50px;
+    min-width: 230px;
+
+    @each $number in 1, 2, 3 {
+      &:nth-child(#{$number})::before {
+        display: block;
+        content: url('../images/png/icon#{$number}.png');
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 38px;
+  }
+
+  &__property {
+    font-family: $secondary-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 1.14;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $main-accent-color;
+
+    margin-bottom: 15px;
+  }
+
+  &__description {
+    font-family: $primary-font;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.7;
+    color: $main-dark-color;
+  }
+}
