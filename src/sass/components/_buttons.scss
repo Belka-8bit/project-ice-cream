@@ -58,6 +58,14 @@
   border: none;
   padding: 0;
   line-height: 0;
+  stroke: $main-accent-color;
+
+  transition: stroke $duration $function;
+
+  &:hover,
+  &:focus {
+    stroke: $button-accent-hover-color;
+  }
 
   @media screen and(min-width:768px) {
     margin-left: auto;
@@ -67,17 +75,30 @@
 
 .close-btn {
   position: absolute;
-  top: 23px;
-  right: 28px;
+  top: 15px;
+  right: 15px;
 
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
 
+  border: 1px solid $main-light-color;
+  border-radius: 50%;
+
+  stroke: $main-light-color;
   background-color: transparent;
   cursor: pointer;
-  border: none;
   padding: 0;
   line-height: 0;
+
+  transition: stroke $duration $function, border-color $duration $function,
+    transform $duration ease-in-out;
+
+  &:hover,
+  &:focus {
+    stroke: $button-accent-hover-color;
+    border-color: $button-accent-hover-color;
+    transform: rotate(90deg);
+  }
 }
 
 .header-btn {
@@ -167,5 +188,10 @@
   border-radius: 50%;
   cursor: pointer;
   border: none;
+
+  &:hover,
+  &:focus {
+    background-color: $button-hover-color;
+  }
 }
 // /Hero / Header btn
