@@ -1,22 +1,48 @@
 .advantages {
   padding: 20px 0 48px;
-  background-color: $about-background-color;
+  background-color: rgba(255, 245, 246, 0.8);
+
+  @media screen and (min-width: 768px) {
+    padding: 33px 0 70px;
+  }
+
+  &__list {
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
+  }
 
   &__item {
-    margin-right: 50px;
-    min-width: 230px;
+    @media screen and (max-width: 767px) {
+      padding-right: 50px;
+      min-width: 230px;
+    }
+
+    @media screen and (min-width: 768px) {
+      width: 180px;
+    }
 
     @each $number in 1, 2, 3 {
       &:nth-child(#{$number})::before {
         display: block;
         content: url('../images/png/icon#{$number}.png');
         margin-bottom: 16px;
+
+        @media screen and (min-width: 768px) {
+          margin-bottom: 36px;
+        }
       }
     }
   }
 
   &__item:not(:last-child) {
-    margin-bottom: 38px;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 38px;
+    }
+
+    @media screen and (min-width: 768px) {
+      margin-right: 60px;
+    }
   }
 
   &__property {
@@ -30,6 +56,10 @@
     color: $main-accent-color;
 
     margin-bottom: 15px;
+
+    @media screen and (min-width: 768px) {
+      font-size: 48px;
+    }
   }
 
   &__description {
@@ -39,5 +69,9 @@
     font-size: 12px;
     line-height: 1.7;
     color: $main-dark-color;
+
+    @media screen and (min-width: 768px) {
+      font-size: 14px;
+    }
   }
 }
