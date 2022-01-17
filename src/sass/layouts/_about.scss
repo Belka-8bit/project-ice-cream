@@ -8,12 +8,19 @@
   background-repeat: no-repeat;
   background-position: 50% 90%;
   background-size: contain;
+  @media screen and (min-width: 768px) {
+    background-image: none;
+  }
 }
 
 .about__label {
-  @include font('Titan One', 18px, normal, 21px, 0.04em, $hero-secondary-background-color);
+  @include font('Titan One', 18px, normal, 1.16, 0.04em, $hero-secondary-background-color);
 
   margin-bottom: 15px;
+  @media screen and (min-width: 768px) {
+    text-align: center;
+    @include font('Titan One', 26px, normal, 1.15, 0.04em, $hero-secondary-background-color);
+  }
 }
 
 .about__title {
@@ -21,27 +28,53 @@
   text-transform: uppercase;
 
   margin-bottom: 25px;
+  @media screen and (min-width: 768px) {
+    text-align: center;
+    @include font('Titan One', 48px, normal, 1.14, 0.04em, $main-accent-color);
+  }
+}
+
+.about-tablet {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .about__img {
   margin-bottom: 46px;
   height: auto;
   min-width: 280px;
+  @media screen and (min-width: 768px) {
+    margin: 0;
+  }
 }
 
 .about__text {
   padding: 0 30px;
-  margin-bottom: 20px;
+
+  @media screen and (min-width: 768px) {
+    padding: 0;
+    width: 340px;
+  }
 }
 
 .about__text--top {
   @include font('DM Sans', 12px, 500, 1.62, 0.04em, $main-dark-color);
 
   margin-bottom: 32px;
+  @media screen and (min-width: 768px) {
+    @include font('DM Sans', 14px, 500, 1.76, 0.04em, $main-dark-color);
+  }
 }
 
 .abour__text--bottom {
+  margin-bottom: 20px;
   @include font('DM Sans', 12px, 500, 1.62, 0.04em, $secondary-dark-color);
+  @media screen and (min-width: 768px) {
+    @include font('DM Sans', 14px, 500, 1.76, 0.04em, $secondary-dark-color);
+    margin-bottom: 62px;
+  }
 }
 
 .about__btn {
