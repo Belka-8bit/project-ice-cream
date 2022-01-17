@@ -45,6 +45,11 @@
   line-height: 0.96;
 
   color: $main-accent-color;
+
+  @media screen and (min-width: 768px) {
+    font-size: 34px;
+    line-height: 0.91;
+  }
 }
 
 .hero-image__thumb {
@@ -54,6 +59,12 @@
   transform: translate(-35%, -23%);
   width: 346px;
   height: 420px;
+
+  @media screen and (min-width: 768px) {
+    width: 324px;
+    height: 368px;
+    transform: translate(-20%, -35%);
+  }
 }
 
 .hero-circle {
@@ -61,6 +72,11 @@
   border-radius: 50%;
   width: 346px;
   height: 346px;
+
+  @media screen and (min-width: 768px) {
+    width: 324px;
+    height: 324px;
+  }
 }
 
 .hero-image {
@@ -88,11 +104,11 @@
 }
 
 .milk-thumb {
+  display: flex;
+
   @media screen and (max-width: 767px) {
     display: none;
   }
-
-  display: flex;
 }
 
 .milk-text__thumb {
@@ -121,9 +137,6 @@
 }
 
 .hero-label {
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
   font-family: $secondary-font;
   font-style: normal;
   font-weight: 400;
@@ -133,4 +146,8 @@
   top: 50%;
   right: 0;
   transform: translate(-34px, -80%);
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 }
