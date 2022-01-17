@@ -2,6 +2,11 @@
   margin-bottom: 137px;
   position: relative;
   z-index: 2;
+
+  @media screen and(min-width:768px) {
+    padding-top: 38px;
+    margin-bottom: 15px;
+  }
 }
 
 .logo-link {
@@ -45,6 +50,26 @@
     transform: translateX(105%);
 
     transition: transform 250ms ease-in-out, opacity 250ms ease-in-out;
+  }
+
+  @media screen and (min-width: 768px) and(max-width: 1279px) {
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    height: 100vh;
+    padding-top: 60px;
+    padding-left: 34px;
+    padding-right: 34px;
+    background-color: $menu-background-color;
+
+    opacity: 0;
+    transform: translateX(105%);
+
+    transition: transform 250ms ease-in-out, opacity 250ms ease-in-out;
+  }
+  @media screen and (min-width: 768px) {
+    width: calc(100vw - 60%);
   }
 }
 
