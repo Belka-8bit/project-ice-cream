@@ -4,8 +4,8 @@
   background-image: linear-gradient(
     to bottom,
     $main-background-color 84px,
-    $gallery-background-color 10px,
-    $gallery-background-color 100%
+    rgba(255, 245, 246, 0.8) 10px,
+    rgba(255, 245, 246, 0.8) 100%
   );
   background-color: $about-background-color;
 
@@ -18,14 +18,14 @@
 }
 
 .contacts-thumb {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 73px;
-  height: 28px;
-  margin-bottom: 25px;
-  background-color: $coffee-card-background-color;
-  border-radius: 6px;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  // max-width: 73px;
+  // height: 28px;
+  // margin-bottom: 25px;
+  // background-color: $coffee-card-background-color;
+  // border-radius: 6px;
   &--secondary {
     max-width: 138px;
     background-color: $shake-card-background-color;
@@ -45,10 +45,21 @@
   &--accent {
     color: $secondary-accent-color;
   }
-  &--light {
-    color: $main-light-color;
+  &--wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 16px;
+  margin-bottom: 25px;
+  background-color: $coffee-card-background-color;
+  border-radius: 6px;
+  color: $main-light-color;
   }
-}
+  }
+
+
+
 
 .contacts__city {
   display: block;
