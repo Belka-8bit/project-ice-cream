@@ -152,7 +152,7 @@
     cursor: pointer;
 
     background-color: $main-light-color;
-    transition: border 150ms $function, border-color $duration $function;
+    transition: border 150ms $function, border-color 150ms $function;
 
     &:hover,
     &:focus {
