@@ -138,7 +138,6 @@
     @include font($primary-font, 14px, bold, 1.52, 0.04em, $main-light-color);
 
     text-align: center;
-    margin-top: 30px;
     margin-bottom: 30px;
 }
 
@@ -149,9 +148,17 @@
     min-height: 40px;
     border-radius: 50%;
     border: none;
+    border-color: transparent;
     cursor: pointer;
 
     background-color: $main-light-color;
+    transition: border 150ms $function, border-color 150ms $function;
+
+    &:hover,
+    &:focus {
+        border: 2px solid;
+        border-color: $main-accent-color;
+    }
 }
 
 .products__btn-icon {
