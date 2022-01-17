@@ -58,6 +58,11 @@
   border: none;
   padding: 0;
   line-height: 0;
+
+  @media screen and(min-width:768px) {
+    margin-left: auto;
+    margin-right: 30px;
+  }
 }
 
 .close-btn {
@@ -152,5 +157,17 @@
   display: flex;
   margin-top: 19px;
   margin-bottom: 19px;
+}
+
+.milk-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $main-light-color;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
 }
 // /Hero / Header btn
