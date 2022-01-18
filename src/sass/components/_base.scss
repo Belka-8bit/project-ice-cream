@@ -1,3 +1,8 @@
 body {
   font-family: $primary-font;
+
+  @media screen and (min-width: 1280px) {
+    background: url(../../src/images/parallax.png);
+    background-size: contain;
+  }
 }
