@@ -8,7 +8,18 @@
     rgba(255, 245, 246, 0.8) 100%
   );
   background-color: $about-background-color;
-
+  @media screen and (min-width: 768px) {
+    padding-left: 36px;
+    padding-right: 36px;
+    padding-top: 60px;
+    padding-bottom: 79px;
+    background-image: linear-gradient(
+    to bottom,
+    $main-background-color 115px,
+    rgba(255, 245, 246, 0.8) 10px,
+    rgba(255, 245, 246, 0.8) 100%
+  );
+  }
   & .container {
     display: grid;
     justify-items: center;
@@ -19,6 +30,10 @@
 
 .contacts__card {
   display: block;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
   }
 
 
