@@ -2,6 +2,11 @@
   overflow: hidden;
   min-height: 502px;
   background-color: rgba(255, 184, 202, 0.8);
+
+  @media screen and (min-width: 768px) {
+    min-height: 399px;
+    padding-bottom: 28px;
+  }
 }
 
 .hero .container {
@@ -25,6 +30,18 @@
   color: $main-light-color;
 
   width: 218px;
+
+  margin-bottom: 19px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 22px;
+    line-height: 1.14;
+    width: 162px;
+  }
+}
+
+.hero-title__item {
+  margin-right: 15px;
 }
 
 .hero-accent {
@@ -34,6 +51,11 @@
   line-height: 0.96;
 
   color: $main-accent-color;
+
+  @media screen and (min-width: 768px) {
+    font-size: 34px;
+    line-height: 0.91;
+  }
 }
 
 .hero-image__thumb {
@@ -43,6 +65,12 @@
   transform: translate(-35%, -23%);
   width: 346px;
   height: 420px;
+
+  @media screen and (min-width: 768px) {
+    width: 324px;
+    height: 368px;
+    transform: translate(-20%, -35%);
+  }
 }
 
 .hero-circle {
@@ -50,6 +78,11 @@
   border-radius: 50%;
   width: 346px;
   height: 346px;
+
+  @media screen and (min-width: 768px) {
+    width: 324px;
+    height: 324px;
+  }
 }
 
 .hero-image {
@@ -77,11 +110,11 @@
 }
 
 .milk-thumb {
+  display: flex;
+
   @media screen and (max-width: 767px) {
     display: none;
   }
-
-  display: flex;
 }
 
 .milk-text__thumb {
@@ -98,6 +131,10 @@
   margin-bottom: 20px;
 }
 
+.milk-svg {
+  fill: $main-accent-color;
+}
+
 .girl-thumb {
   @media screen and (max-width: 767px) {
     display: none;
@@ -110,9 +147,6 @@
 }
 
 .hero-label {
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
   font-family: $secondary-font;
   font-style: normal;
   font-weight: 400;
@@ -122,4 +156,46 @@
   top: 50%;
   right: 0;
   transform: translate(-34px, -80%);
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.hero-label__item {
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+.hero-label__text {
+  position: relative;
+  font-size: 28px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  text-align: left;
+
+  color: $main-accent-color;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-8px, -5px);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $main-background-color;
+    z-index: -1;
+  }
+}
+
+.hero-label__span {
+  font-family: $primary-font;
+
+  font-size: 8px;
+  line-height: 1.25;
+
+  color: $main-light-color;
 }
