@@ -72,7 +72,8 @@
 
     transform: translateX(105%);
 
-    transition: transform $duration ease-in-out;
+    transition: transform $duration ease-in-out, opacity $duration ease-in-out,
+      visibility $duration ease-in-out;
   }
   @media screen and (min-width: 768px) {
     width: calc(100vw - 60%);
