@@ -22,15 +22,16 @@
   }
 
 
-.contacts__card-item {
+.contacts-card__item {
   width: 220px;
   height: 427px;
   padding: 40px 20px;
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
   background-color: $main-background-color;
-  &:not(:last-child) {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
+  &--no-bottom {
+    margin-bottom: 0;
   }
 }
 
