@@ -47,6 +47,7 @@
     font-size: 38px;
     line-height: 1.16;
     width: 277px;
+    margin-bottom: 25px;
   }
 }
 
@@ -182,14 +183,14 @@
   position: absolute;
   right: 0;
   bottom: 0;
-  transform: translate(0%, 21%);
+  transform: translateY(21%);
 
   @media screen and (max-width: 767px) {
     display: none;
   }
 
   @media screen and (min-width: 1280px) {
-    transform: translate(0%, 12%);
+    transform: translateY(12%);
   }
 }
 
@@ -201,8 +202,12 @@
 
   position: absolute;
   top: 50%;
-  right: 0;
+  right: -30px;
   transform: translate(-34px, -80%);
+
+  @media screen and (max-width: 1279px) {
+    right: 0;
+  }
 
   @media screen and (max-width: 767px) {
     display: none;
