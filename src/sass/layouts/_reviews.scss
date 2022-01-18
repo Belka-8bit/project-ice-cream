@@ -1,24 +1,29 @@
 .reviews {
   padding-top: 40px;
   padding-bottom: 43px;
+  @media screen and (min-width: 768px) {
+    padding-top: 61px;
+    padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 62px;
+    padding-bottom: 66px;
+  }
 }
 .wrapper {
   position: relative;
 }
-.swiper {
-  width: 100%;
-  height: 100%;
-}
-.reviews-slider {
+.slider__item {
   text-align: center;
 
   background-color: $main-background-color;
 
   /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
+  // display: -webkit-box;
+  // display: -ms-flexbox;
+  // display: -webkit-flex;
+  // display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -51,6 +56,14 @@
   padding-right: 50px;
   margin-bottom: 30px;
   background-color: $review-background-color;
+
+  @media screen and(min-width:768px) {
+    width: 620px;
+  }
+
+  @media screen and(min-width:1280px) {
+    width: 926px;
+  }
 }
 .reviews-card {
   background: repeating-linear-gradient(#e1e1e1 1px, transparent 2px, transparent 31px);
@@ -70,8 +83,17 @@
     width: 330px;
     height: 105px;
   }
-  // @media {
-  // }
+  @media screen and(min-width:768px) {
+    margin-left: auto;
+    margin-right: auto;
+    width: 450px;
+    height: 90px;
+  }
+
+  @media screen and(min-width:1280px) {
+    width: 800px;
+    height: 60px;
+  }
 }
 // .reviews-block__text:before {
 //   content: '';
@@ -107,6 +129,19 @@
     line-height: 2.16;
     letter-spacing: 0.04em;
   }
+  @media screen and(min-width:768px) {
+    width: 460px;
+    bottom: 25px;
+    left: -10px;
+  }
+
+  @media screen and(min-width:1280px) {
+    width: 822px;
+    bottom: 25px;
+    left: -10px;
+    font-size: 16px;
+    line-height: 1.86;
+  }
 }
 .block__text::before {
   content: '';
@@ -123,6 +158,14 @@
   background-repeat: no-repeat;
 
   z-index: -1;
+
+  @media screen and(min-width:768px) {
+    left: -15px;
+  }
+
+  @media screen and(min-width:1280px) {
+    left: -20px;
+  }
 }
 .reviews-nome {
   background-color: $main-background-color;
@@ -135,13 +178,17 @@
   font-size: 14px;
   line-height: 1.86;
 
-  // @media screen and(min-width:768px) {
-  //   font-size: 16px;
-  // }
+  margin-bottom: 30px;
 
-  // @media screen and(min-width:1280px) {
-  //   font-size: 20px;
-  // }
+  @media screen and(min-width:768px) {
+    font-size: 16px;
+
+    margin-bottom: 35px;
+  }
+
+  @media screen and(min-width:1280px) {
+    font-size: 20px;
+  }
 }
 
 .reviews-home__name::before {
@@ -154,19 +201,61 @@
 
   margin-bottom: 18px;
 }
-.reviews-home__name::after {
-  content: '';
-  height: 12px;
-  background-image: url('./../images/customers/home.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-  margin-top: 30px;
+// .reviews-home__name::after {
+//   content: '';
+//   height: 12px;
+//   background-image: url('./../images/customers/home.svg');
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   margin-top: 30px;
+// }
+// .swiper-pagination-bullet-active {
+//   background-image: url('./../images/customers/home.svg');
+//   --swiper-theme-color: $main-light-color;
+//   background-size: cover;
+//   border-radius: unset;
+//   width: 12px;
+//   height: 12px;
+// }
+.slick-track {
+  display: flex;
+  align-items: flex-start;
 }
-.swiper-pagination-bullet-active {
-  background-image: url('./../images/customers/home.svg');
-  --swiper-theme-color: $main-light-color;
-  background-size: cover;
-  border-radius: unset;
+
+.slider {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.slider__item {
+  text-align: center;
+}
+
+.slider .slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider .slick-dots li {
+  list-style: none;
+}
+
+.slider .slick-dots button {
+  padding: 0;
+  font-size: 0;
   width: 12px;
   height: 12px;
+  background-color: #d9d9d9;
+  border-radius: 50%;
+  border: 0;
+  margin: 0 9px;
+}
+
+.slider .slick-dots .slick-active button {
+  background-image: url(./../images/customers/home-alone.svg);
+  border-radius: 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
