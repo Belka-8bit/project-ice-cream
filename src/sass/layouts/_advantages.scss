@@ -6,6 +6,10 @@
     padding: 33px 0 70px;
   }
 
+  @media screen and (min-width: 1280px) {
+    padding: 20px 0 70px;
+  }
+
   &__list {
     @media screen and (min-width: 768px) {
       display: flex;
@@ -22,6 +26,10 @@
       width: 180px;
     }
 
+    @media screen and (min-width: 1280px) {
+      width: 330px;
+    }
+
     @each $number in 1, 2, 3 {
       &:nth-child(#{$number})::before {
         display: block;
@@ -30,6 +38,10 @@
 
         @media screen and (min-width: 768px) {
           margin-bottom: 36px;
+        }
+
+        @media screen and (min-width: 1280px) {
+          margin-bottom: 40px;
         }
       }
     }
@@ -43,35 +55,36 @@
     @media screen and (min-width: 768px) {
       margin-right: 60px;
     }
+
+    @media screen and (min-width: 1280px) {
+      margin-right: 30px;
+    }
   }
 
   &__property {
-    font-family: $secondary-font;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 36px;
-    line-height: 1.14;
-    letter-spacing: 0.04em;
+    @include font($secondary-font, 36px, 400, 1.14, 0.04em, $main-accent-color);
     text-transform: uppercase;
-    color: $main-accent-color;
-
-    margin-bottom: 15px;
+    margin-bottom: 13px;
 
     @media screen and (min-width: 768px) {
       font-size: 48px;
     }
+
+    @media screen and (min-width: 1280px) {
+      font-size: 58px;
+      margin-bottom: 15px;
+    }
   }
 
   &__description {
-    font-family: $primary-font;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 1.7;
-    color: $main-dark-color;
+    @include font($primary-font, 12px, 700, 1.7, 0.04em, $main-dark-color);
 
     @media screen and (min-width: 768px) {
       font-size: 14px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      font-size: 16px;
     }
   }
 }
