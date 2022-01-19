@@ -6,21 +6,13 @@
       <picture class="about__img">
         <source srcset="
                 ./images/desktop/about/desktop-cow-1x.png 1x, 
-                ./images/desktop/about/desktop-cow-2x.png 2x" 
-                media="(min-width: 1200px)" 
-        />
-        <source 
-          srcset="
+                ./images/desktop/about/desktop-cow-2x.png 2x" media="(min-width: 1200px)" />
+        <source srcset="
                 ./images/tablet/about/tab-cow-1x.png 1x, 
-                ./images/tablet/about/tab-cow-2x.png 2x"
-                media="(min-width: 768px)"      
-        />
-        <source
-          srcset="
+                ./images/tablet/about/tab-cow-2x.png 2x" media="(min-width: 768px)" />
+        <source srcset="
                   ./images/mobile/about/cow-2x.png 1x, 
-                  ./images/mobile/about/cow-1x.png 2x"
-                  media="(min-width: 480px)"
-        />
+                  ./images/mobile/about/cow-1x.png 2x" media="(min-width: 480px)" />
         <img src="./images/mobile/about/cow-1x.png" alt="проверка" />
       </picture>
       <div class="about__text">
@@ -33,7 +25,7 @@
           in imperdiet placerat. Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna
           maximus. Cras massa nibh, tincidunt. Aliquam erat volutpat. Aenean accumsan.
         </p>
-        <button class="about__btn" type="button">
+        <button class="about__btn" type="button" data-modal-open-about>
           Read more
           <svg class="about__icon" width="8" height="10">
             <use href="../src/images/icons.svg#btn_arrow_icon"></use>
@@ -42,4 +34,21 @@
       </div>
     </div>
   </div>
+  <div class="backdrop is-hidden" data-modal-about>
+    <div class="modal-about">
+      <button class="modal-btn__close" type="button" data-modal-close-about>
+        <svg class="close--icon">
+          <use href="./images/icons.svg#close_menu_icon"></use>
+        </svg>
+      </button>
+      <h2 class="modal-about__title">About us</h2>
+      <h3 class="modal-about__subtitle">Origins</h3>
+      <p class="modal-about__text">The origins of frozen desserts are obscure although several accounts exist
+        about their history. Some sources describe ice cream-like foods as originating in Persia as far back
+        as 550 BCE</p>
+      <h3 class="modal-about__subtitle">Composition</h3>
+      <p class="modal-about__text">Ice cream is a colloidal emulsion made with water, ice, milk fat, milk
+        protein, sugar and air. Water and fat have the
+        highest proportions by weight creating an emulsion that has dispersed phase as fat globules.</p>
+    </div>
 </section>
