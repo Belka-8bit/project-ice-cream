@@ -16,7 +16,7 @@
 .contacts__button {
   @extend %button;
   width: 161px;
-  height: 44px;
+  min-height: 44px;
   background-color: $main-accent-color;
   color: $main-light-color;
   display: flex;
@@ -30,11 +30,17 @@
   &:focus {
     background-color: #d41342;
   }
+  @media screen and(min-width:768px) {
+    width: 191px;
+  }
   &--light {
     background-color: $main-background-color;
     color: $main-accent-color;
     margin-top: 10px;
     transition: background-color $duration $function;
+     @media screen and(min-width:768px) {
+        margin-top: 0;
+     }
     &:hover,
     &:focus {
       background-color: $button-hover-color;
