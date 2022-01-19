@@ -8,7 +8,18 @@
     rgba(255, 245, 246, 0.8) 100%
   );
   background-color: $about-background-color;
-
+  @media screen and (min-width: 768px) {
+    padding-left: 36px;
+    padding-right: 36px;
+    padding-top: 60px;
+    padding-bottom: 79px;
+    background-image: linear-gradient(
+    to bottom,
+    $main-background-color 135px,
+    rgba(255, 245, 246, 0.8) 10px,
+    rgba(255, 245, 246, 0.8) 100%
+  );
+  }
   & .container {
     display: grid;
     justify-items: center;
@@ -19,6 +30,11 @@
 
 .contacts__card {
   display: block;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+  }
   }
 
 
@@ -32,6 +48,16 @@
   &:not(:last-child) {
     margin-bottom: 20px;
   }
+  @media screen and (min-width: 768px) {
+    width: 220px;
+    height: 544px;
+    padding: 50px 30px;
+    // margin-bottom: 0;
+    &:not(:last-child) {
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+  }
 }
 
 
@@ -41,16 +67,28 @@
   font-size: 12px;
   line-height: 1.86;
   color: $main-dark-color;
+  @media screen and (min-width: 768px) {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.86;
+  }
   &--secondary {
     margin-bottom: 25px;
     line-height: 1.5;
     color: $secondary-dark-color;
+    @media screen and (min-width: 768px) {
+      line-height: 1.66;
+      margin-bottom: 30px;
+    }
   }
   &--accent {
     color: $secondary-accent-color;
   }
   &--time {
     margin-bottom: 25px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 30px;
+    }
   }
   &--wrapper {
   display: flex;
@@ -62,16 +100,35 @@
   background-color: $coffee-card-background-color;
   border-radius: 6px;
   color: $main-light-color;
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+    letter-spacing: 0.04em;
+    width: 73px;
+    height: 28px;
+    margin-bottom: 30px;
+  }
   }
   &--light {
-    max-width: 138px;
+    min-width: 138px;
     background-color: $shake-card-background-color;
+    @media screen and (min-width: 768px) {
+    font-size: 16px;
+    letter-spacing: 0.04em;
+    margin-bottom: 30px;
+    }
   }
   &--days {
     margin-top: 25px;
+    @media screen and (min-width: 768px) {
+      margin-top: 30px;
+    }
   }
   &--city {
   margin-bottom: 10px;
+  letter-spacing: 0.04em;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 15px;
+  }
   }
 }
 
@@ -94,16 +151,35 @@
     margin-bottom: 10px;
     width: 179px;
     border-top: 1px solid $footer-line-color;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 15px;
+    }
   }
   &--contacts {
   margin-top: 25px;
+  @media screen and (min-width: 768px) {
+    margin-top: 30px;
+    
+  }
   }
 }
 
 .contacts__item-btn {
   &:not(:last-child) {
   margin-top: 54px;
+  @media screen and (min-width: 768px) {
+    margin-top: 0;
+    margin-right: 15px;
  }
+ }
+}
+
+.contacts__list-btn {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
 }
 
 .contacts__link {
@@ -115,6 +191,10 @@
   &:hover,
   &:focus {
     color: $main-accent-color;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 1.83;
   }
 }
 
