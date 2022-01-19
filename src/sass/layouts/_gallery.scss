@@ -2,6 +2,15 @@
   padding-top: 49px;
   padding-bottom: 40px;
   background-image: linear-gradient(rgba(255, 245, 246, 0.8) 45%, $main-background-color 45%);
+  @media screen and (min-width: 768px) {
+    padding-top: 70px;
+    padding-bottom: 61px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 72px;
+    padding-bottom: 62px;
+  }
 }
 
 .container {
@@ -9,7 +18,7 @@
 }
 
 .container.responsive {
-  max-width: 1140px;
+  max-width: 1280px;
 }
 
 .gallery__thumb {
@@ -19,11 +28,11 @@
   flex-wrap: wrap;
   margin: -1px;
 
-  //   @media screen and(min-width:768px) {
-  //     margin-right: auto;
-  //     margin-left: auto;
-  //     margin: -4px;
-  //   }
+    @media screen and(min-width:768px) {
+      margin-right: auto;
+      margin-left: auto;
+      margin: -4px;
+    }
 }
 
 .picture__wrapper {
