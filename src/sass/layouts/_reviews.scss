@@ -16,9 +16,7 @@
 }
 .slider__item {
   text-align: center;
-
-  background-color: $main-background-color;
-
+  // background-color: $main-background-color;
   /* Center slide text vertically */
   // display: -webkit-box;
   // display: -ms-flexbox;
@@ -37,10 +35,12 @@
   }
 }
 .customer-card {
+  background-color: rgba(255, 255, 255, 0.8);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  // @include flex($display: flex, $ai: center, $jc: center, $direction: column);
 }
 .reviews__photo {
   max-width: 85px;
@@ -50,8 +50,9 @@
   margin-bottom: 29px;
 }
 .reviews-card__color {
-  padding-top: 71px;
-  padding-bottom: 20px;
+  // padding-top: 71px;
+  // padding-bottom: 20px;
+  @include sectionMixin($t: 71px, $b: 20px);
   padding-left: 50px;
   padding-right: 50px;
   margin-bottom: 30px;

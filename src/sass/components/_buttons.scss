@@ -44,10 +44,24 @@
 
 // Hero / Header btn
 .menu-btn {
-  margin: 0;
-  width: 160px;
+  @extend %button;
 
-  @media screen and(max-width:767px) {
+  margin: 0;
+  width: 209px;
+  height: 44px;
+  margin-bottom: 19px;
+  color: $main-accent-color;
+
+  &:hover,
+  &:focus {
+    background-color: $button-hover-color;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 186px;
+  }
+
+  @media screen and(min-width:1280px) {
     display: none;
   }
 }
@@ -104,10 +118,23 @@
 .header-btn {
   @extend %button;
 
-  width: 209px;
+  min-width: 180px;
   height: 44px;
-  margin-bottom: 19px;
   color: $main-accent-color;
+
+  @media screen and(max-width:767px) {
+    display: none;
+  }
+
+  @media screen and(max-width:1279px) {
+    min-width: 159px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    position: relative;
+    margin: 0;
+    left: 110px;
+  }
 
   &:hover,
   &:focus {
@@ -118,14 +145,6 @@
 .btn-icon {
   margin-left: 12px;
   stroke: $main-accent-color;
-}
-
-.menu-btn {
-  margin: 0;
-  width: 160px;
-  @media screen and(max-width:767px) {
-    display: none;
-  }
 }
 
 .hero-button {
@@ -176,6 +195,10 @@
 .hero-tittle__btn {
   display: flex;
   margin-bottom: 19px;
+
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 59px;
+  }
 }
 
 .milk-btn {

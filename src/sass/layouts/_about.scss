@@ -2,7 +2,7 @@
   text-align: start;
   padding-top: 125px;
   padding-bottom: 19px;
-  background: #fff5f6;
+  background: rgba(255, 245, 246, 0.8);
 
   background-image: url('../images/mobile/about/bckg-milk.png');
   background-repeat: no-repeat;
@@ -10,6 +10,12 @@
   background-size: contain;
   @media screen and (min-width: 768px) {
     background-image: none;
+    padding-bottom: 33px;
+  }
+  @media screen and (min-width: 1280px) {
+    background-image: url('../images/desktop/about/bckg-milk.png');
+    background-position: 50% 90%;
+    padding-bottom: 19px;
   }
 }
 
@@ -21,6 +27,10 @@
     text-align: center;
     @include font('Titan One', 26px, normal, 1.15, 0.04em, $hero-secondary-background-color);
   }
+  @media screen and (min-width: 1280px) {
+    text-align: center;
+    @include font('Titan One', 30px, normal, 1.13, 0.04em, $hero-secondary-background-color);
+  }
 }
 
 .about__title {
@@ -31,6 +41,11 @@
   @media screen and (min-width: 768px) {
     text-align: center;
     @include font('Titan One', 48px, normal, 1.14, 0.04em, $main-accent-color);
+    margin-bottom: 50px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 55px;
+    @include font('Titan One', 58px, normal, 1.13, 0.04em, $main-accent-color);
   }
 }
 
@@ -38,6 +53,9 @@
   @media screen and (min-width: 768px) {
     display: flex;
     justify-content: space-between;
+  }
+  @media screen and (min-width: 1280px) {
+    align-items: center;
   }
 }
 
@@ -57,6 +75,9 @@
     padding: 0;
     width: 340px;
   }
+  @media screen and (min-width: 1280px) {
+    width: 463px;
+  }
 }
 
 .about__text--top {
@@ -66,6 +87,9 @@
   @media screen and (min-width: 768px) {
     @include font('DM Sans', 14px, 500, 1.76, 0.04em, $main-dark-color);
   }
+  @media screen and (min-width: 1280px) {
+    @include font('DM Sans', 16px, 500, 1.76, 0.04em, $main-dark-color);
+  }
 }
 
 .abour__text--bottom {
@@ -73,6 +97,10 @@
   @include font('DM Sans', 12px, 500, 1.62, 0.04em, $secondary-dark-color);
   @media screen and (min-width: 768px) {
     @include font('DM Sans', 14px, 500, 1.76, 0.04em, $secondary-dark-color);
+    margin-bottom: 62px;
+  }
+  @media screen and (min-width: 1280px) {
+    @include font('DM Sans', 16px, 500, 1.76, 0.04em, $secondary-dark-color);
     margin-bottom: 62px;
   }
 }

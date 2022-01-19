@@ -3,15 +3,37 @@
   position: relative;
   z-index: 2;
 
+  @media screen and(min-width:320px) {
+    padding-top: 6px;
+  }
+
   @media screen and(min-width:768px) {
     padding-top: 38px;
     margin-bottom: 15px;
   }
+
+  @media screen and(min-width:1280px) {
+    margin-bottom: 84px;
+  }
 }
 
 .logo-link {
-  display: block;
-  padding-top: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 30px;
+}
+
+.logo-text {
+  font-family: $secondary-font;
+
+  margin-left: 20px;
+  font-size: 30px;
+  line-height: 1.13;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: $main-accent-color;
 }
 
 .menu-wrapper {
@@ -19,16 +41,17 @@
   justify-content: space-between;
   align-items: center;
 
-  .menu-container & {
-    align-items: flex-start;
-  }
-
   @media screen and (max-width: 767px) {
     .menu-container & {
       flex-basis: 100%;
       height: 100%;
       flex-direction: column;
     }
+  }
+
+  @media screen and(min-width:1280px) {
+    align-items: center;
+    justify-content: flex-start;
   }
 }
 
@@ -52,7 +75,8 @@
 
     transform: translateX(105%);
 
-    transition: transform $duration ease-in-out;
+    transition: transform $duration ease-in-out, opacity $duration ease-in-out,
+      visibility $duration ease-in-out;
   }
 
   @media screen and (min-width: 768px) and(max-width: 1279px) {
@@ -75,8 +99,19 @@
     transition: transform $duration ease-in-out, opacity $duration ease-in-out,
       visibility $duration ease-in-out;
   }
+
   @media screen and (min-width: 768px) {
     width: calc(100vw - 60%);
+  }
+
+  @media screen and (min-width: 925px) {
+    width: calc(100vw - 55%);
+  }
+
+  @media screen and(min-width:1280px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -101,11 +136,28 @@
   font-size: 14px;
   line-height: 1.29;
   color: $main-light-color;
+
+  @media screen and(min-width:1280px) {
+    font-size: 16px;
+    line-height: 1.31;
+    display: flex;
+  }
 }
 
-.navigation-list__item:nth-child(2n + 1) {
-  border-top: 1px solid $menu-border-color;
-  border-bottom: 1px solid $menu-border-color;
+.navigation-list__item {
+  &:nth-child(2n + 1) {
+    @media screen and (max-width: 1279px) {
+      border-top: 1px solid $menu-border-color;
+      border-bottom: 1px solid $menu-border-color;
+    }
+  }
+
+  @media screen and(min-width:1280px) {
+    border: none;
+    &:not(:last-child) {
+      margin-right: 35px;
+    }
+  }
 }
 
 .navigation-list__link {
@@ -114,8 +166,19 @@
   transition: color 250ms ease-in-out;
   padding-left: 24px;
 
+  @media screen and(min-width:1280px) {
+    padding: 25px 0;
+  }
+
   &:hover,
   &:focus {
     color: $main-accent-color;
+  }
+}
+
+.js-open-menu,
+.js-close-menu {
+  @media screen and (min-width: 1280px) {
+    display: none;
   }
 }
