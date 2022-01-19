@@ -12,22 +12,29 @@
 
   &__list {
     @media screen and (min-width: 768px) {
-      display: flex;
+      @include list(60px, 60px, wrap);
+    }
+
+    @media screen and (min-width: 1280px) {
+      @include list(30px, 30px, wrap);
     }
   }
 
   &__item {
     @media screen and (max-width: 767px) {
-      padding-right: 50px;
       min-width: 230px;
     }
 
     @media screen and (min-width: 768px) {
-      width: 180px;
+      margin-left: 60px;
+      margin-top: 60px;
+      flex-basis: calc((100% - 3 * 60px) / 3);
     }
 
     @media screen and (min-width: 1280px) {
-      width: 330px;
+      margin-left: 30px;
+      margin-top: 30px;
+      flex-basis: calc((100% - 3 * 30px) / 3);
     }
 
     @each $number in 1, 2, 3 {
@@ -50,14 +57,6 @@
   &__item:not(:last-child) {
     @media screen and (max-width: 767px) {
       margin-bottom: 38px;
-    }
-
-    @media screen and (min-width: 768px) {
-      margin-right: 60px;
-    }
-
-    @media screen and (min-width: 1280px) {
-      margin-right: 30px;
     }
   }
 
