@@ -42,13 +42,13 @@
     color: $main-accent-color;
     margin-top: 10px;
     transition: background-color $duration $function;
-     @media screen and(min-width:768px) {
-        width: 184px;
-        margin-top: 0;
-     }
-     @media screen and(min-width: 1280px) {
-    width: 180px;
-  }
+    @media screen and(min-width:768px) {
+      width: 184px;
+      margin-top: 0;
+    }
+    @media screen and(min-width: 1280px) {
+      width: 180px;
+    }
     &:hover,
     &:focus {
       background-color: $button-hover-color;
@@ -65,6 +65,7 @@
   height: 44px;
   margin-bottom: 19px;
   color: $main-accent-color;
+  transition: background-color $duration $function;
 
   &:hover,
   &:focus {
@@ -136,6 +137,8 @@
   height: 44px;
   color: $main-accent-color;
 
+  transition: background-color $duration $function;
+
   @media screen and(max-width:767px) {
     display: none;
   }
@@ -184,6 +187,8 @@
   color: $main-light-color;
   background-color: $main-accent-color;
 
+  transition: background-color $duration $function;
+
   &:hover,
   &:focus {
     background-color: $button-accent-hover-color;
@@ -199,6 +204,8 @@
   text-align: center;
   color: $main-accent-color;
   background-color: $main-light-color;
+
+  transition: background-color $duration $function;
 
   &:hover,
   &:focus {
@@ -225,6 +232,8 @@
   border-radius: 50%;
   cursor: pointer;
   border: none;
+
+  transition: background-color $duration $function;
 
   &:hover,
   &:focus {
