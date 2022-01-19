@@ -21,11 +21,16 @@
     padding-left: 115px;
     padding-bottom: 82px;
     padding-right: 115px;
-    background-image: linear-gradient(
+    
+    background-image: url(../images/contacts_drops2.png),
+    linear-gradient(
     to bottom,
     $main-background-color 160px,
     rgba(255, 245, 246, 0.8) 160px,
   );
+    background-repeat: no-repeat,no-repeat; 
+    background-size: auto 444px; 
+    background-position: 50% 154px,0 0;
   }
   }
   & .container {
@@ -238,8 +243,10 @@
   margin-top: 25px;
   @media screen and (min-width: 768px) {
     margin-top: 30px;
-    
   }
+  @media screen and (min-width: 1280px) {
+      margin-top: 32px;
+    }
   }
 }
 
@@ -250,11 +257,20 @@
     margin-top: 0;
     margin-right: 15px;
  }
+ @media screen and (min-width: 1280px) {
+    margin-top: 0;
+    margin-right: 15px;
+ }
  }
 }
 
 .contacts__list-btn {
   @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  @media screen and (min-width: 1280px) {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -273,6 +289,10 @@
   }
   @media screen and (min-width: 768px) {
     font-size: 14px;
+    line-height: 1.83;
+  }
+  @media screen and(min-width: 1280px) {
+    font-size: 16px;
     line-height: 1.83;
   }
 }
