@@ -49,6 +49,8 @@
 .products__list {
     margin-bottom: -130px;
 
+
+
     @media screen and (min-width: 768px) {
         display: flex;
         margin-bottom: 0;
@@ -216,11 +218,14 @@
     max-width: 280px;
     background-color: $cream-card-background-color;
     border-radius: 24px;
-    margin: 0 auto;
     padding-left: 41px;
     padding-right: 39px;
     padding-top: 161px;
     padding-bottom: 41px;
+
+    @media screen and (max-width: 767px) {
+        margin: 0 auto;
+    }
 
     @media screen and (min-width: 768px) {
         padding: 152px 23px 40px;
