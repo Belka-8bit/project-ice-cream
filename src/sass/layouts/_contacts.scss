@@ -29,8 +29,8 @@
     rgba(255, 245, 246, 0.8) 160px,
   );
     background-repeat: no-repeat,no-repeat; 
-    background-size: auto 444px; 
-    background-position: 50% 154px,0 0;
+    background-size: auto 378px; 
+    background-position: 50% 180px, 0 0;
   }
   }
   & .container {
@@ -38,6 +38,21 @@
     justify-items: center;
     align-items: center;
     height: 100%;
+  }
+  @media screen and (min-width: 768px) {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 100%;
+  }
+  @media screen and (min-width: 1280px) {
+    display: grid;
+    // justify-items: center;
+    // align-items: center;
+    // height: 100%;
+    
+      justify-content: center;
+    flex-direction: column;
   }
 }
 
@@ -50,6 +65,7 @@
   }
   @media screen and (min-width: 1280px) {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 85px;
   }
