@@ -13,6 +13,7 @@
   border-radius: 22px;
 }
 
+//contacts-button
 .contacts__button {
   @extend %button;
   width: 161px;
@@ -30,8 +31,11 @@
   &:focus {
     background-color: #d41342;
   }
-  @media screen and(min-width:768px) {
+  @media screen and(min-width: 768px) {
     width: 191px;
+  }
+  @media screen and(min-width: 1280px) {
+    width: 198px;
   }
   &--light {
     background-color: $main-background-color;
@@ -39,8 +43,12 @@
     margin-top: 10px;
     transition: background-color $duration $function;
      @media screen and(min-width:768px) {
+        width: 184px;
         margin-top: 0;
      }
+     @media screen and(min-width: 1280px) {
+    width: 180px;
+  }
     &:hover,
     &:focus {
       background-color: $button-hover-color;
