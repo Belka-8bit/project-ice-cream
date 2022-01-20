@@ -13,4 +13,10 @@
   function toggleModal() {
     refs.modal.classList.toggle('is-hidden');
   }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      refs.modal.classList.add('is-hidden');
+    }
+  });
 })();
