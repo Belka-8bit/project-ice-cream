@@ -1,0 +1,1 @@
+{"version":3,"sources":["js/close-menu.js"],"names":["$","click","removeClass"],"mappings":";AAAAA,EAAE,0BAA0BC,MAAM,WAChCD,EAAE,mBAAmBE,YAAY","file":"close-menu.d8f25bf2.js","sourceRoot":"../src","sourcesContent":["$('.navigation-list__link').click(function () {\n  $('.menu-container').removeClass('is-open');\n});\n"]}
