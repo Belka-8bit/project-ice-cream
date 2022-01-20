@@ -70,7 +70,6 @@
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: contain;
-  min-width: none;
 
   transition: transform $duration $function, opacity $duration $function;
 
@@ -184,6 +183,10 @@
   background-position: 50%;
   background-size: contain;
   transition: transform $duration $function, opacity $duration $function;
+
+  .is-hidden > & {
+    transform: translate(-50%, -50%) scale(0.5);
+  }
 
   @media screen and (min-width: 480px) {
     width: 450px;
@@ -337,6 +340,10 @@
   background-position: 50%;
   background-size: contain;
   transition: transform $duration $function, opacity $duration $function;
+
+  .is-hidden > & {
+    transform: translate(-50%, -50%) scale(0.5);
+  }
   @media screen and (min-width: 768px) {
     width: 600px;
     height: 550px;
