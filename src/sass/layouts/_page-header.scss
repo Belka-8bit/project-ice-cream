@@ -176,6 +176,10 @@
   }
 }
 
+.active {
+  color: $main-accent-color;
+}
+
 .js-open-menu,
 .js-close-menu {
   @media screen and (min-width: 1280px) {
